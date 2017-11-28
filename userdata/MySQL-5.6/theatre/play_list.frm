@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `theatre`.`play`.`play_id` AS `ID`,`theatre`.`play`.`title` AS `Название спектакля` from `theatre`.`play`
+md5=48aabded81791d660ef3c4a3036c10c7
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2017-11-28 18:22:32
+create-version=1
+source=SELECT play_id AS ID, title AS "Название спектакля" FROM Play
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `theatre`.`play`.`play_id` AS `ID`,`theatre`.`play`.`title` AS `Название спектакля` from `theatre`.`play`

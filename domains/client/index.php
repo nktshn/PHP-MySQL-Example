@@ -4,12 +4,12 @@ require('db_conn.php');
 show_conn_status(is_connected());
 
 $table = $_POST['table-selector'];
-$query = 'SELECT * FROM ' . $table;
+$query = 'SELECT * FROM ' . $table."_list";
 $result = mysqli_query(is_connected(), $query);
 $out = mysqli_fetch_all($result);
 sort($out);
 
-$query = 'SHOW COLUMNS FROM ' . $table;
+$query = 'SHOW COLUMNS FROM ' . $table."_list";
 $result = mysqli_query(is_connected(), $query);
 $t_headers = mysqli_fetch_all($result);
 
