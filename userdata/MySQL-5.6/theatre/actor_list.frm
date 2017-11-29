@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `theatre`.`actor`.`actor_id` AS `ID`,`theatre`.`actor`.`lastname` AS `Фамилия`,`theatre`.`actor`.`firstname` AS `Имя`,`theatre`.`actor`.`patronymic` AS `Отчество`,`theatre`.`actor`.`experience` AS `Опыт (лет)`,`theatre`.`actor`.`grade` AS `Звание`,`theatre`.`actor`.`birthday` AS `Дата рождения` from `theatre`.`actor`
+md5=b9b0fadfb3096d43eaa799a04aa84ac0
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=%
+suid=1
+with_check_option=0
+timestamp=2017-11-29 08:39:26
+create-version=1
+source=select `theatre`.`actor`.`actor_id` AS `ID`,`theatre`.`actor`.`lastname` AS `Фамилия`,`theatre`.`actor`.`firstname` AS `Имя`,`theatre`.`actor`.`patronymic` AS `Отчество`,`theatre`.`actor`.`experience` AS `Опыт (лет)`,`theatre`.`actor`.`grade` AS `Звание`,`theatre`.`actor`.`birthday` AS `Дата рождения` from `theatre`.`actor`
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `theatre`.`actor`.`actor_id` AS `ID`,`theatre`.`actor`.`lastname` AS `Фамилия`,`theatre`.`actor`.`firstname` AS `Имя`,`theatre`.`actor`.`patronymic` AS `Отчество`,`theatre`.`actor`.`experience` AS `Опыт (лет)`,`theatre`.`actor`.`grade` AS `Звание`,`theatre`.`actor`.`birthday` AS `Дата рождения` from `theatre`.`actor`

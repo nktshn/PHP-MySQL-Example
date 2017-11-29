@@ -12,7 +12,6 @@ body {
 }
 .table_th {
     border: solid 1px #171717;
-    padding: 5px;
     text-align: center;
 }
 
@@ -24,7 +23,7 @@ body {
 
 .main-section {
     justify-content: center;
-    display: flex;
+    display: grid;
 }
 
 .add-input {
@@ -35,4 +34,12 @@ body {
     text-align: center;
     font-family: inherit;
     font-size: inherit;
+}
+
+.TABLE-TITLE {
+    font-family: inherit;
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-weight: bold;
 }

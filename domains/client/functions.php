@@ -17,6 +17,7 @@ function generate_selectors($tables)
 
 function show_table($t_headers, $rows)
 {
+
     //headers
     echo "<tr>";
     for ($i = 1; $i < count($t_headers); $i++) {
@@ -35,7 +36,7 @@ function show_table($t_headers, $rows)
     echo "<form action='index.php' method='post'>";
     echo "<tr>";
     for ($i = 1; $i < count($t_headers); $i++) {
-        echo "<td class = 'table_th'><input class='add-input' type='text'></td>";
+        echo "<td class = 'table_th'><input class='add-input' type='text' placeholder='...'></td>";
     }
     echo "</tr>";
     echo "</form>";

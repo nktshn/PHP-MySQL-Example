@@ -13,6 +13,13 @@ if (empty($_POST)) {
 $tables = getData('SHOW FULL TABLES FROM theatre WHERE Table_Type != \'VIEW\'', true);
 $out = getData('SELECT * FROM ' . $table . "_list", true);
 $t_headers = getData('SHOW COLUMNS FROM ' . $table . "_list", false);
+$FKs = getData('SELECT 
+  TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME, REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME
+FROM
+  INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE
+  REFERENCED_TABLE_SCHEMA = \'theatre\' AND
+  REFERENCED_TABLE_NAME = \'' . $table . '\'', false);
 
 ?>
 
@@ -39,13 +46,14 @@ $t_headers = getData('SHOW COLUMNS FROM ' . $table . "_list", false);
 <section class="main-section">
     <table class="table">
         <?php
+        echo strtoupper("<p class='table-title'>$table</p>");
         show_table($t_headers, $out);
         ?>
     </table>
 </section>
 
 <?php
-//debug($tables);
+debug($FKs);
 ?>
 </body>
 </html>
