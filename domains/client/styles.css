@@ -1,8 +1,38 @@
+body {
+    background: #3F3F3F;
+    color: #CFCFCF;
+    font-family: "SF UI  Text Light";
+    font-size: 14px;
+}
 .table {
-    border: solid 2px black;
+    border: solid 1px #171717;
+    min-width: 500px;
+    background: #5a5a5a;
+    font-size: inherit;
 }
 .table_th {
-    border: solid 1px black;
+    border: solid 1px #171717;
     padding: 5px;
     text-align: center;
+}
+
+.table-header {
+    font-size: 16px;
+    color: #eeeeee;
+    background: #747474;
+}
+
+.main-section {
+    justify-content: center;
+    display: flex;
+}
+
+.add-input {
+    background: #717171;
+    width: 100%;
+    border: 1px solid #656363;
+    color: #CFCFCF;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
 }

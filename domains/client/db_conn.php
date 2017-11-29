@@ -14,8 +14,8 @@ function is_connected() {
 
 function show_conn_status($c) {
     if ($c) {
-        echo "<span style='position: absolute; bottom: 3px; right: 3px; color: green'>connected</span>";
+        echo "<span style='position: absolute; bottom: 3px; right: 3px; color: #33da0c'>connected</span>";
     } else {
-        echo "<span style='position: absolute; bottom: 3px; right: 3px; color: red'>not connected</span>";
+        echo "<span style='position: absolute; bottom: 3px; right: 3px; color: #ff5651'>not connected</span>";
     }
 }
