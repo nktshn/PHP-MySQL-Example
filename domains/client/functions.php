@@ -15,19 +15,18 @@ function generate_selectors($tables)
     }
 }
 
-function show_table($t_headers, $rows)
+function show_table($view_headers, $rows, $table_headers, $FKs, $tablename)
 {
-
     //headers
     echo "<tr>";
-    for ($i = 1; $i < count($t_headers); $i++) {
-        echo "<th class = 'table_th table-header'>{$t_headers[$i][0]}</th>";
+    for ($i = 1; $i < count($view_headers); $i++) {
+        echo "<th class = 'table_th table-header'>{$view_headers[$i][0]}</th>";
     }
     //rows
     echo "</tr>";
     for ($j = 0; $j < count($rows); $j++) {
         echo "<tr>";
-        for ($i = 1; $i < count($t_headers); $i++) {
+        for ($i = 1; $i < count($view_headers); $i++) {
             echo "<td class = 'table_th'>{$rows[$j][$i]}</td>";
         }
         echo "<tr>";
@@ -35,7 +34,15 @@ function show_table($t_headers, $rows)
     //add form
     echo "<form action='index.php' method='post'>";
     echo "<tr>";
-    for ($i = 1; $i < count($t_headers); $i++) {
+
+    for ($i = 1; $i < count($view_headers); $i++) {
+        for ($j = 0; $j < count($FKs); $j++) {
+            if (strtolower($FKs[$j][0]) == strtolower($tablename)) {
+                $IDs = getData('SELECT '.$FKs[$j][1].' FROM '.$FKs[$j][3], true);
+                debug($IDs);
+
+            }
+        }
         echo "<td class = 'table_th'><input class='add-input' type='text' placeholder='...'></td>";
     }
     echo "</tr>";
